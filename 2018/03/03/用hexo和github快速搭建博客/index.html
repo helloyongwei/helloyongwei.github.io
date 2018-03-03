@@ -14,15 +14,15 @@
 <meta property="og:url" content="http://yoursite.com/2018/03/03/用hexo和github快速搭建博客/index.html">
 <meta property="og:site_name" content="开博大吉">
 <meta property="og:description" content="#用hexo和github快速搭建博客 以前用hexo和github搭建过博客，今天在动手实践一边也算是复习了。 本篇默认已在本机(windows)安装好git、node， 且有github账号 是的， 这篇只适用于windows用户， mac我没有，所以。。。 以下是步骤 #hexo安装hexo并进行初始化1npm install -g hexo-cli 我们的hexo已经安装好了， 执行下列命">
-<meta property="og:image" content="http://yoursite.com/2018/03/03/用hexo和github快速搭建博客/github创建hexo库.png">
-<meta property="og:image" content="http://yoursite.com/post-name/sshkey.png">
-<meta property="og:image" content="http://yoursite.com/2018/03/03/用hexo和github快速搭建博客/githubPage.png">
-<meta property="og:image" content="http://yoursite.com/2018/03/03/用hexo和github快速搭建博客/helloyongwei.github.io.png">
-<meta property="og:updated_time" content="2018-03-03T02:21:27.258Z">
+<meta property="og:image" content="http://yoursite.com/用hexo和github快速搭建博客/github创建hexo库.png">
+<meta property="og:image" content="http://yoursite.com/用hexo和github快速搭建博客/sshkey.png">
+<meta property="og:image" content="http://yoursite.com/用hexo和github快速搭建博客/githubPage.png">
+<meta property="og:image" content="http://yoursite.com/用hexo和github快速搭建博客/helloyongwei.github.io.png">
+<meta property="og:updated_time" content="2018-03-03T02:33:37.574Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="用hexo和github搭建博客">
 <meta name="twitter:description" content="#用hexo和github快速搭建博客 以前用hexo和github搭建过博客，今天在动手实践一边也算是复习了。 本篇默认已在本机(windows)安装好git、node， 且有github账号 是的， 这篇只适用于windows用户， mac我没有，所以。。。 以下是步骤 #hexo安装hexo并进行初始化1npm install -g hexo-cli 我们的hexo已经安装好了， 执行下列命">
-<meta name="twitter:image" content="http://yoursite.com/2018/03/03/用hexo和github快速搭建博客/github创建hexo库.png">
+<meta name="twitter:image" content="http://yoursite.com/用hexo和github快速搭建博客/github创建hexo库.png">
   
     <link rel="alternative" href="/atom.xml" title="开博大吉" type="application/atom+xml">
   
@@ -196,11 +196,11 @@
 <p>博客在本地就搭建好了， 注意是本地！本地！本地！</p>
 <p>#github<br>如何部署到github上呢？先大概了解下流程</p>
 <p>首先， 我们需要创建一个库用来存放我们的博客， 并配置相关信息<br>然后， 使用<code>hexo deploy</code>命令即可部署。<br>最后， 在浏览器中输入网址就可以看到了</p>
-<p>创建一个空库， 库的名字为： [用户名.github.io]<br>下面这张图片都应该能看懂！<br><img src="github创建hexo库.png" alt="Alt text"></p>
+<p>创建一个空库， 库的名字为： [用户名.github.io]<br>下面这张图片都应该能看懂！<br><img src="/用hexo和github快速搭建博客/github创建hexo库.png" alt="Alt text"></p>
 <p>在git bash运行下列命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd path/myBlog #进入你博客的位置</span><br><span class="line">start _config.yml</span><br></pre></td></tr></table></figure></p>
 <p>在_congig.yml中的最后一行修改为：<br><code>type: git</code> , 注意冒号和git之间有空格<br>再添加一行：<br><code>repo: git@github.com:helloyongwei/helloyongwei.github.io.git</code></p>
-<p>repo后面的一串是怎么来的？打开刚创建好的库，单击clone or download， 复制ssh key到repo即可。如图<br><img src="/post-name/sshkey.png" alt="Alt text"></p>
-<p>使用hexo命令部署：<br><code>hexo deploy</code><br>打开GitHub Pages 功能。<br>进入helloyongwei.github.io库， 最右边单击Setting， 向下找， 找到Github Page后按图设置就可以了。<br><img src="githubPage.png" alt="Alt text"><br>设置好后出现地址，<br><img src="helloyongwei.github.io.png" alt="Alt text"><br>在浏览器中输入<code>https://helloyongwei.github.io</code> 就可一看到自己的博客了</p>
+<p>repo后面的一串是怎么来的？打开刚创建好的库，单击clone or download， 复制ssh key到repo即可。如图<br><img src="/用hexo和github快速搭建博客/sshkey.png" alt="Alt text"></p>
+<p>使用hexo命令部署：<br><code>hexo deploy</code><br>打开GitHub Pages 功能。<br>进入helloyongwei.github.io库， 最右边单击Setting， 向下找， 找到Github Page后按图设置就可以了。<br><img src="/用hexo和github快速搭建博客/githubPage.png" alt="Alt text"><br>设置好后出现地址，<br><img src="/用hexo和github快速搭建博客/helloyongwei.github.io.png" alt="Alt text"><br>在浏览器中输入<code>https://helloyongwei.github.io</code> 就可一看到自己的博客了</p>
 <p>#建立源代码库<br>在github上建立空仓库， 取名为blog-generate<br>运行如下命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">echo &quot;#blog-generator&quot; &gt;&gt; README.md</span><br><span class="line">git init</span><br><span class="line">git add REMADE.md</span><br><span class="line">git commit -m &quot;first commit&quot;</span><br><span class="line">git remote add origin git@github.com:helloyongwei/blog-generate.git</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure></p>
 <p>blog-generate用来存放博客源代码， helloyongwei.github.io则用来存放博客</p>
 <p>每次部署博客后（即<code>hexo deploy</code>)，也需要执行下列命令以保证不遗漏博客源代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m &quot;xxx&quot;</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure></p>
